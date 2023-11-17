@@ -6,11 +6,12 @@ const nextConfig = {
         { hostname: "images.unsplash.com" },
         { hostname: "google.com/url" },
         { hostname: "lh3.googleusercontent.com" },
+        { hostname: "images.pexels.com" },
       ],
-    },
-    experimental: {
-      serverActions: true,
-    },
+  },
+  experimental: {
+    serverActions: true
+  }
   };
   
   module.exports = nextConfig;
