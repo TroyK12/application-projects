@@ -17,6 +17,10 @@ export async function signUpUser(formData: FormData) {
         return
     }
 
+/*     const userExists = await prisma.user.findUnique({
+        email: email,
+    }) */
+
     const salt = await bcryptjs.genSalt(10)
     const hashedPassword = await bcryptjs.hash(password, salt)
 
@@ -34,8 +38,8 @@ export async function signUpUser(formData: FormData) {
 
 export default function signUpPage() {
     return (
-        <div className="flex flex-col items-center">
-            <h1 className="text-5xl font-bold text-center">Sign In</h1>
+        <div className="flex flex-col items-center my-6">
+            <h1 className="text-5xl font-bold text-center">Sign Up</h1>
             <form action={signUpUser} className="flex flex-col w-full items-center mb-6">
                 <input
                     name="username"

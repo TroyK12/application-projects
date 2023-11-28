@@ -12,7 +12,6 @@ interface UserMenuBtnProps {
 export default function UserMenuBtn({ session }: UserMenuBtnProps) {
     const user = session?.user
 
-
     return (
         <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
@@ -31,7 +30,7 @@ export default function UserMenuBtn({ session }: UserMenuBtnProps) {
                 
                 {user ?
                     <li><button onClick={() => signOut({ callbackUrl: "/" })}>Logout</button></li> :
-                    <li><button onClick={() => signIn()}>Login</button></li>}
+                    <li><button onClick={() => { signIn() }}>Login</button></li>}
                 {user ? "" : <li><Link href="/signup">Sign Up</Link></li>}
             </ul>
         </div>

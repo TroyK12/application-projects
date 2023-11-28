@@ -7,43 +7,57 @@ import GoogleProvider from "next-auth/providers/google";
 import { PrismaClient } from "@prisma/client";
 import { env } from "@/lib/env";
 import CredentialsProvider from "next-auth/providers/credentials";
+import { compare } from "bcryptjs";
 
 
 export const authOptions: NextAuthOptions = {
     adapter: PrismaAdapter(prisma as PrismaClient) as Adapter,
+    session: {
+        strategy: "jwt"
+    },
     providers: [
         GoogleProvider({
             clientId: env.GOOGLE_CLIENT_ID,
             clientSecret: env.GOOGLE_CLIENT_SECRET,
         }),
-/*         CredentialsProvider({
-            name: "Credentials",
+        CredentialsProvider({
             credentials: {
                 email: {
-                    label: "email",
-                    type: "text",
+                    label: "Email",
+                    type: "email",
                 },
-                password: { 
-                    label: "password", 
-                    type: "password" },
+                password: {
+                    label: "Password",
+                    type: "password"
+                },
             },
             async authorize(credentials) {
-                const user = await prisma.user.findUnique({
-                where: {
-                    email: credentials?.email
+                try {
+                    if (!credentials?.email || !credentials.password) return null;
+
+                    const user = await prisma.user.findUnique({
+                        where: {
+                            email: credentials?.email
+                        }
+                    })
+                    if (!user) {
+                        return null;
+                    } 
+
+                    const isValidPassword = await compare(credentials!.password, user?.password as string)
+                    if (!isValidPassword) return null
+
+                    return {
+                        id: user.id + '',
+                        email: user.email,
+                    }
+                } catch (error: any) {
+                    console.error('Authorization error:', error);
+                    return null;
                 }
-            })
-            if (user && user.password === credentials?.password) {
-                  return Promise.resolve(user);
-                } else {
-                  return Promise.resolve(null);
-                }
-              },           
-        }), */
+            },
+        }),
     ],
-    pages: {
-        signIn: '/signin'
-    },
 }
 
 const handler = NextAuth(authOptions);
