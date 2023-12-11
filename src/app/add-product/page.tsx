@@ -80,7 +80,7 @@ export default async function addProductPage() {
                 <input
                     name="price"
                     type="number"
-                    placeholder="Product Price"
+                    placeholder="Product Price (Enter price without periods or symbols)"
                     required
                     className="input w-full max-w-[600px] bg-slate-300 rounded-md my-3 text-black"
                 />

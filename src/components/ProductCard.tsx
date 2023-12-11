@@ -23,7 +23,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         />
       </figure>
       <div className="card-body my-5">
-        <h2>{product.name}</h2>
+        <h2 className="text-sm">{product.name}</h2>
         <PriceTag price={product.price} />
       </div>
     </Link>
