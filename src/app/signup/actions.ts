@@ -10,7 +10,7 @@ export async function signUpUser(prevState: any, formData: FormData) {
     const password = formData.get('password')?.toString()   
 
     if (!username || !email || !password) {
-        throw Error("Enter resquired field")
+        throw Error("Enter required field")
     }
 
     try {    
