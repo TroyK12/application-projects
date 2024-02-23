@@ -14,7 +14,7 @@ export async function addProduct(formData: FormData) {
     const session = await getServerSession(authOptions);
 
   if (!session) {
-    redirect("/api/auth/signin?callbackUrl=/add-product");
+    redirect("/api/auth/signin?callbackUrl=/addProduct");
   }
 
     const name = formData.get("name")?.toString()
@@ -43,7 +43,7 @@ export default async function addProductPage() {
     const session = await getServerSession(authOptions);
 
     if (!session) {
-      redirect("/api/auth/signin?callbackUrl=/add-product");
+      redirect("/api/auth/signin?callbackUrl=/addProduct");
     }
 
 
