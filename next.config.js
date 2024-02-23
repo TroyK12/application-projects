@@ -8,10 +8,11 @@ const nextConfig = {
         { hostname: "lh3.googleusercontent.com" },
         { hostname: "images.pexels.com" },
       ],
-  },
-  experimental: {
-    serverComponentsExternalPackages: ['bcrypt']
-  }
+    },
+    experimental: {
+      serverComponentsExternalPackages: ['bcrypt']
+    }
+    
   };
   
   module.exports = nextConfig;
