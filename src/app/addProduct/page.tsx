@@ -8,7 +8,7 @@ export const metadata = {
     title: "Add Product"
 }
 
-export async function addingProduct(formData: FormData) {
+async function addingProduct(formData: FormData) {
     "use server"
 
     const session = await getServerSession(authOptions);
