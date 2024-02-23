@@ -8,7 +8,7 @@ export const metadata = {
     title: "Add Product"
 }
 
-export async function addProduct(formData: FormData) {
+export async function addingProduct(formData: FormData) {
     "use server"
 
     const session = await getServerSession(authOptions);
@@ -38,7 +38,7 @@ export async function addProduct(formData: FormData) {
     redirect("/")
 }
 
-export default async function addProductPage() {
+const addProduct = async () => {
     
     const session = await getServerSession(authOptions);
 
@@ -52,7 +52,7 @@ export default async function addProductPage() {
             <h1 className="text-5xl font-bold text-center">Add Products</h1>
             <form
                 className="flex flex-col items-center"
-                action={addProduct}
+                action={addingProduct}
             >
                 <input
                     name="name"
@@ -89,3 +89,5 @@ export default async function addProductPage() {
         </div>
     )
 }
+
+export default addProduct;
