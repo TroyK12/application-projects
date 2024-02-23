@@ -1,7 +1,6 @@
 "use server"
 import bcryptjs from "bcryptjs"
 import { prisma } from "@/lib/db/prisma"
-import { redirect } from "next/navigation"
 import { revalidatePath } from "next/cache"
 
 export async function signUpUser(prevState: any, formData: FormData) {

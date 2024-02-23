@@ -3,7 +3,7 @@ import Link from "next/link";
 import UserMenuBtn from "./UserMenuBtn";
 import ShoppingCartBtn from "./ShoppingCartBtn";
 import { getServerSession } from "next-auth";
-import { authOptions } from "../api/auth/[...nextauth]/route";
+import authOptions from "../api/auth/[...nextauth]/options";
 import { getCart } from "@/lib/db/cart";
 import { redirect } from "next/navigation";
 

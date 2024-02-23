@@ -1,5 +1,5 @@
 import { cookies } from "next/dist/client/components/headers"
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import authOptions from "@/app/api/auth/[...nextauth]/options";
 import { Cart, Prisma } from "@prisma/client";
 import { getServerSession } from "next-auth";
 import { prisma } from "./prisma";
