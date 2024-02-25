@@ -11,7 +11,7 @@ export default async function setProductQuantity(
 ) {
   const cart = (await getCart()) ?? (await createCart())
 
-  const articleInCart = cart.items.find((item) => item.productId === productId)
+  const articleInCart = cart.items.find((item: any) => item.productId === productId)
 
   if (quantity === 0) {
     if (articleInCart) {
