@@ -48,7 +48,7 @@ export default async function ProductPage({params: {id}}: ProductPageProps ) {
 
       <div>
         <h1 className="text-5xl font-bold">{product.name}</h1>
-        <PriceTag price={product.price} className="mt-4" />
+        <PriceTag price={product.price} className="mt-[16px]" />
         <AddToCartBtn
           productId={product.id}
           incrementProductQuantity={incrementProductQuantity}
