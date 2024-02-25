@@ -25,7 +25,7 @@ export default async function searchProducts({ searchParams: { query } }: search
         <>
             <h1 className="text-4xl font-bold w-full text-center my-4 uppercase">Search: { query }</h1>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
-            {products.map((product) => (
+            {products.map((product: any) => (
                 <ProductCard product={product} key={product.id} />
             ))}
             </div>

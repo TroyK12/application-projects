@@ -21,7 +21,7 @@ export default async function CartPage() {
       <div className="flex">
         <div className="w-1/2">
             <h1 className="mb-6 text-3xl font-bold">Shopping Cart</h1>
-            {cart?.items.map((cartItem) => (
+            {cart?.items.map((cartItem: any) => (
                 <CartEntry
                 cartItem={cartItem}
                 key={cartItem.id}

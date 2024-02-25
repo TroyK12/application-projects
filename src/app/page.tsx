@@ -53,7 +53,7 @@ export default async function Home() {
 
       <h1 className="text-4xl font-bold my-8 w-full text-center">Newest Items Out Now</h1>
       <div className="my-3 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-        {newProducts.map((product) => (
+        {newProducts.map((product: any) => (
           <ProductCard product={product} key={product.id} />
         ))}
       </div>
@@ -61,7 +61,7 @@ export default async function Home() {
       <div>
         <h1 className="text-4xl font-bold my-8 w-full text-center">Hoodies</h1>
         <div className="my-3 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-        {hoodies.map((product) => (
+        {hoodies.map((product: any) => (
           <ProductCard product={product} key={product.id} />
         ))}
         </div>
@@ -71,7 +71,7 @@ export default async function Home() {
       <div>
         <h1 className="text-4xl font-bold my-8 w-full text-center">T-Shirts</h1>
         <div className="my-3 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-        {tshirt.map((product) => (
+        {tshirt.map((product: any) => (
           <ProductCard product={product} key={product.id} />
         ))}
         </div>
@@ -81,7 +81,7 @@ export default async function Home() {
       <div>
         <h1 className="text-4xl font-bold my-8 w-full text-center">Long Sleeves</h1>
         <div className="my-3 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-        {longsleeve.map((product) => (
+        {longsleeve.map((product: any) => (
           <ProductCard product={product} key={product.id} />
         ))}
         </div>
