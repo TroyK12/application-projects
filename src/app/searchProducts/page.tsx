@@ -1,5 +1,6 @@
 import ProductCard from "@/components/ProductCard";
 import { prisma } from "@/lib/db/prisma";
+import { Product } from "@prisma/client";
 
 
 interface searchProductsProps {
@@ -25,7 +26,7 @@ export default async function searchProducts({ searchParams: { query } }: search
         <>
             <h1 className="text-4xl font-bold w-full text-center my-4 uppercase">Search: { query }</h1>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
-            {products.map((product: any) => (
+            {products.map((product: Product) => (
                 <ProductCard product={product} key={product.id} />
             ))}
             </div>
