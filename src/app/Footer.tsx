@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 
 export default function Footer() {
@@ -41,7 +42,7 @@ export default function Footer() {
     </div>
   </div>
   <div className="mt-8 text-center">
-    <p>&copy; 2023 Clothing Company. All rights reserved.</p>
+    <p>&copy; 2023 Clothing Company. All rights reserved. Mock site by <Link href="https://troykush.com">troykush.com</Link></p>
   </div>
 </footer>
     );
