@@ -23,7 +23,7 @@ export default async function CartPage() {
                 />
             ))}
         </div>
-          {cart?.items.length !== undefined  && <div className="w-1/2">
+          {!cart?.items.length ? <div></div> : <div className="w-1/2">
             <div className="flex flex-col fixed gap-4 border border-solid border-slate-900 shadow-md w-80 py-10 mx-10 bg-slate-100 rounded-lg sm:items-center">
                 <p className="mb-3 font-bold">
                 Subtotal: {formatPrice(cart?.subtotal || 0)}
