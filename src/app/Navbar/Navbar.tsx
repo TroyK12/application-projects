@@ -36,10 +36,10 @@ export default async function Navbar() {
                             <path fill="#000000" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
                         </svg>
                     </div>
-                    <ul className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-72">
-                        <li><Link href={`/productsCategory?data=${encodeURIComponent("hoodie")}`}>Hoodies</Link></li>
-                        <li><Link href={`/productsCategory?data=${encodeURIComponent("longsleeve")}`}>Long Sleeves</Link></li>
-                        <li><Link href={`/productsCategory?data=${encodeURIComponent("tshirt")}`}>T-Shirts</Link></li>
+                    <ul className="dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-[50vw]">
+                        <li className="w-full text-center"><Link href={`/productsCategory?data=${encodeURIComponent("hoodie")}`}>Hoodies</Link></li>
+                        <li className="w-full text-center"><Link href={`/productsCategory?data=${encodeURIComponent("longsleeve")}`}>Long Sleeves</Link></li>
+                        <li className="w-full text-center"><Link href={`/productsCategory?data=${encodeURIComponent("tshirt")}`}>T-Shirts</Link></li>
                     </ul>
                 </div>
             </div>
@@ -58,7 +58,7 @@ export default async function Navbar() {
             </ul>
             <div className="navbar-end w-1/3 flex">
                 <div className="dropdown dropdown-end">
-                    <button className="btn btn-ghost btn-circle">
+                    <button className="sm:btn sm:btn-ghost sm:btn-circle">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
                     </button>
                     <form action={searchProducts}>
@@ -68,9 +68,10 @@ export default async function Navbar() {
                                 placeholder="Search"
                                 className="input-bordered input w-full min-w-[100px]"
                             />
+                            <button type="submit" className="py-2">Search</button>
                         </div>
                     </form>
-                    </div>
+                </div>
                 <ShoppingCartBtn cart={cart} />
                 <UserMenuBtn session={session} />
             </div>
