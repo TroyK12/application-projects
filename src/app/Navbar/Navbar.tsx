@@ -37,9 +37,9 @@ export default async function Navbar() {
                         </svg>
                     </div>
                     <ul className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-72">
-                        <li className="hover:underline"><Link href={`/productsCategory?data=${encodeURIComponent("hoodie")}`}>Hoodies</Link></li>
-                        <li className="hover:underline"><Link href={`/productsCategory?data=${encodeURIComponent("longsleeve")}`}>Long Sleeves</Link></li>
-                        <li className="hover:underline"><Link href={`/productsCategory?data=${encodeURIComponent("tshirt")}`}>T-Shirts</Link></li>
+                        <li><Link href={`/productsCategory?data=${encodeURIComponent("hoodie")}`}>Hoodies</Link></li>
+                        <li><Link href={`/productsCategory?data=${encodeURIComponent("longsleeve")}`}>Long Sleeves</Link></li>
+                        <li><Link href={`/productsCategory?data=${encodeURIComponent("tshirt")}`}>T-Shirts</Link></li>
                     </ul>
                 </div>
             </div>
