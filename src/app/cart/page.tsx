@@ -12,7 +12,7 @@ export default async function CartPage() {
   const cart = await getCart();
 
   return (
-      <div className="flex flex-row sm:flex-col">
+      <div className="flex">
         <div className="w-1/2">
             <h1 className="mb-6 text-3xl font-bold">Shopping Cart</h1>
             {cart?.items.map((cartItem: any) => (
@@ -32,7 +32,7 @@ export default async function CartPage() {
                 {!cart?.items.length ? (
                 <div></div>
                 ) : (
-                <button className="btn-primary btn sm:w-[200]">Checkout</button>
+                <button className="btn-primary btn w-[35%] sm:w-[200px]">Checkout</button>
                 )}
             </div>
           </div>}
