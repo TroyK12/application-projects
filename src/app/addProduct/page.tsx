@@ -41,8 +41,9 @@ async function addingProduct(formData: FormData) {
 const addProduct = async () => {
     
     const session = await getServerSession(authOptions);
+    const currentUser = session?.user.email
 
-    if (!session) {
+    if (!session || currentUser != 'tkmwebcreations@gmail.com') {
       redirect("/api/auth/signin?callbackUrl=/addProduct");
     }
 
