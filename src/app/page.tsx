@@ -82,7 +82,7 @@ export default async function Home() {
           <ProductCard product={product} key={product.id} />
         ))}
         </div>
-        <Link className="btn" href={`/productsCategory?data=${encodeURIComponent("hoodie")}`}>See all Hoodies</Link>
+        <Link className="btn pl-10" href={`/productsCategory?data=${encodeURIComponent("hoodie")}`}>See all Hoodies</Link>
       </div>
 
       <div>
@@ -92,7 +92,7 @@ export default async function Home() {
           <ProductCard product={product} key={product.id} />
         ))}
         </div>
-        <Link className="btn" href={`/productsCategory?data=${encodeURIComponent("tshirt")}`}>See all T-Shirts</Link>
+        <Link className="btn pl-10" href={`/productsCategory?data=${encodeURIComponent("tshirt")}`}>See all T-Shirts</Link>
       </div>
 
       <div className="pb-10">
@@ -102,7 +102,7 @@ export default async function Home() {
           <ProductCard product={product} key={product.id} />
         ))}
         </div>
-        <Link className="btn" href={`/productsCategory?data=${encodeURIComponent("longsleeve")}`}>See all Long Sleeves</Link>
+        <Link className="btn pl-10" href={`/productsCategory?data=${encodeURIComponent("longsleeve")}`}>See all Long Sleeves</Link>
       </div>
     </>
   )
