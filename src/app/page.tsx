@@ -52,40 +52,10 @@ export default async function Home() {
       />
 
       <h1 className="text-4xl font-bold my-8 w-full text-center">Newest Items Out Now</h1>
-      <div className="my-3 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-        {newProducts.map((product: any) => (
+      <div className="my-3 px-10 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+        {newProducts.map((product) => (
           <ProductCard product={product} key={product.id} />
         ))}
-      </div>
-
-      <div>
-        <h1 className="text-4xl font-bold my-8 w-full text-center">Hoodies</h1>
-        <div className="my-3 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-        {hoodies.map((product: any) => (
-          <ProductCard product={product} key={product.id} />
-        ))}
-        </div>
-        <Link className="btn" href={`/productsCategory?data=${encodeURIComponent("hoodie")}`}>See all Hoodies</Link>
-      </div>
-
-      <div>
-        <h1 className="text-4xl font-bold my-8 w-full text-center">T-Shirts</h1>
-        <div className="my-3 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-        {tshirt.map((product: any) => (
-          <ProductCard product={product} key={product.id} />
-        ))}
-        </div>
-        <Link className="btn" href={`/productsCategory?data=${encodeURIComponent("tshirt")}`}>See all T-Shirts</Link>
-      </div>
-
-      <div>
-        <h1 className="text-4xl font-bold my-8 w-full text-center">Long Sleeves</h1>
-        <div className="my-3 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-        {longsleeve.map((product: any) => (
-          <ProductCard product={product} key={product.id} />
-        ))}
-        </div>
-        <Link className="btn" href={`/productsCategory?data=${encodeURIComponent("longsleeve")}`}>See all Long Sleeves</Link>
       </div>
 
       <div className="m-auto md:flex p-5">
@@ -96,13 +66,43 @@ export default async function Home() {
           width={300}
           className="m-auto w-full object-cover self-center md:w-1/2 md:m-14 rounded-lg"
         />
-        <p className="text-center m-auto text-base text-gray-700 leading-6 md:w-1/2 md:h-auto lg:text-xl">
+        <p className="m-auto text-base text-gray-700 leading-7 lg:leading-9 tracking-widest md:w-1/2 md:h-auto lg:text-[20px]">
           Welcome to our shop, where comfort meets style! Dive into our collection of high-quality apparel, featuring a curated
           selection of cozy hoodies, trendy t-shirts, and versatile long sleeves. Whether youre seeking casual everyday wear or
           looking to make a fashion statement, our shop has the perfect blend of comfort and fashion to elevate your wardrobe. Explore
           our designs and embrace the warmth and style of our hoodies, the laid-back charm of our t-shirts, and the relaxed elegance
           of our long sleeves – your go-to destination for a wardrobe refresh!
         </p>
+      </div>
+
+      <div>
+        <h1 className="text-4xl font-bold my-8 w-full text-center">Hoodies</h1>
+        <div className="my-3 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+        {hoodies.map((product) => (
+          <ProductCard product={product} key={product.id} />
+        ))}
+        </div>
+        <Link className="btn" href={`/productsCategory?data=${encodeURIComponent("hoodie")}`}>See all Hoodies</Link>
+      </div>
+
+      <div>
+        <h1 className="text-4xl font-bold my-8 w-full text-center">T-Shirts</h1>
+        <div className="my-3 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+        {tshirt.map((product) => (
+          <ProductCard product={product} key={product.id} />
+        ))}
+        </div>
+        <Link className="btn" href={`/productsCategory?data=${encodeURIComponent("tshirt")}`}>See all T-Shirts</Link>
+      </div>
+
+      <div className="pb-10">
+        <h1 className="text-4xl font-bold my-8 w-full text-center">Long Sleeves</h1>
+        <div className="my-3 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+        {longsleeve.map((product) => (
+          <ProductCard product={product} key={product.id} />
+        ))}
+        </div>
+        <Link className="btn" href={`/productsCategory?data=${encodeURIComponent("longsleeve")}`}>See all Long Sleeves</Link>
       </div>
     </>
   )

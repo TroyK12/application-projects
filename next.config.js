@@ -9,10 +9,6 @@ const nextConfig = {
         { hostname: "images.pexels.com" },
       ],
     },
-    experimental: {
-      serverComponentsExternalPackages: ['bcrypt']
-    }
-    
   };
   
   module.exports = nextConfig;
