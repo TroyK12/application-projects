@@ -77,7 +77,7 @@ export default async function Home() {
 
       <div>
         <h1 className="text-4xl font-bold my-8 w-full text-center">Hoodies</h1>
-        <div className="my-3 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <div className="my-3 px-10 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
         {hoodies.map((product) => (
           <ProductCard product={product} key={product.id} />
         ))}
@@ -87,7 +87,7 @@ export default async function Home() {
 
       <div>
         <h1 className="text-4xl font-bold my-8 w-full text-center">T-Shirts</h1>
-        <div className="my-3 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <div className="my-3 px-10 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
         {tshirt.map((product) => (
           <ProductCard product={product} key={product.id} />
         ))}
@@ -97,7 +97,7 @@ export default async function Home() {
 
       <div className="pb-10">
         <h1 className="text-4xl font-bold my-8 w-full text-center">Long Sleeves</h1>
-        <div className="my-3 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <div className="my-3 px-10 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
         {longsleeve.map((product) => (
           <ProductCard product={product} key={product.id} />
         ))}
